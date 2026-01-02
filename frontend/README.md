@@ -1,64 +1,48 @@
-# TailAdmin React - Free React Tailwind Admin Dashboard Template
+# Restaurant Admin Dashboard
 
-TailAdmin is a free and open-source admin dashboard template built on **React and Tailwind CSS**, providing developers
-with everything they need to create a comprehensive, data-driven back-end,
-dashboard, or admin panel solution for upcoming web projects.
-
-With TailAdmin, you get access to all the necessary dashboard UI components, elements, and pages required to build a
-feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web
-application or a simple website, TailAdmin is the perfect solution to help you get up and running quickly.
-
-![TailAdmin React.js Dashboard Preview](./banner.png)
+A comprehensive admin dashboard for managing restaurant operations, built with React, TypeScript, and Tailwind CSS.
 
 ## Overview
 
-TailAdmin provides essential UI components and layouts for building feature-rich, data-driven admin dashboards and
-control panels. It's built on:
+This Restaurant Admin Dashboard provides a complete solution for restaurant management, including menu management, order tracking, staff management, analytics, and more. It's built with modern web technologies to ensure a smooth and efficient user experience.
 
-- React 19
-- TypeScript
-- Tailwind CSS v4
+## Features
 
-### Quick Links
+- 🍽️ **Menu Management** - Create, update, and organize menu items and categories
+- 📊 **Order Management** - Track and manage orders in real-time
+- 👥 **Staff Management** - Manage staff members, roles, and permissions
+- 📈 **Analytics Dashboard** - View sales reports, popular items, and business insights
+- 🎨 **Modern UI** - Beautiful, responsive interface with dark mode support
+- 🔐 **Authentication** - Secure login and role-based access control
+- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
 
-- [✨ Visit Website](https://tailadmin.com)
-- [📄 Documentation](https://tailadmin.com/docs)
-- [⬇️ Download](https://tailadmin.com/download)
-- [🖌️ Figma Design File (Community Edition)](https://www.figma.com/community/file/1214477970819985778)
-- [⚡ Get PRO Version](https://tailadmin.com/pricing)
+## Tech Stack
 
-### Demos
+- **Frontend Framework**: React 19
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **State Management**: React Hooks & Context API
+- **Routing**: React Router
+- **Charts**: ApexCharts
+- **Build Tool**: Vite
 
-- [Free Version](https://free-react-demo.tailadmin.com/)
-- [Pro Version](https://react-demo.tailadmin.com)
+## Prerequisites
 
-### Other Versions
+Before you begin, ensure you have the following installed:
 
-- [HTML Version](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
-- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
-- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
-- [Angular Version](https://github.com/TailAdmin/free-angular-tailwind-dashboard)
-- [Laravel Version](https://github.com/TailAdmin/tailadmin-laravel)
+- Node.js 18.x or later (Node.js 20.x or later recommended)
+- npm or yarn package manager
 
 ## Installation
 
-### Prerequisites
+1. **Clone the repository** (if not already cloned):
 
-To get started with TailAdmin, ensure you have the following prerequisites installed and set up:
+   ```bash
+   git clone <your-repository-url>
+   cd "Restaurent Admin/frontend"
+   ```
 
-- Node.js 18.x or later (recommended to use Node.js 20.x or later)
-
-### Cloning the Repository
-
-Clone the repository using the following command:
-
-```bash
-git clone https://github.com/TailAdmin/free-react-tailwind-admin-dashboard.git
-```
-
-> Windows Users: place the repository near the root of your drive if you face issues while cloning.
-
-1. Install dependencies:
+2. **Install dependencies**:
 
    ```bash
    npm install
@@ -66,128 +50,123 @@ git clone https://github.com/TailAdmin/free-react-tailwind-admin-dashboard.git
    yarn install
    ```
 
+3. **Start the development server**:
 
-2. Start the development server:
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-## Components
+4. **Open your browser** and navigate to the URL shown in the terminal (typically `http://localhost:5173`)
 
-TailAdmin is a pre-designed starting point for building a web-based dashboard using React.js and Tailwind CSS. The
-template includes:
+## Project Structure
 
-- Sophisticated and accessible sidebar
-- Data visualization components
-- Prebuilt profile management and 404 page
-- Tables and Charts(Line and Bar)
-- Authentication forms and input elements
-- Alerts, Dropdowns, Modals, Buttons and more
-- Can't forget Dark Mode 🕶️
+```
+frontend/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page components
+│   ├── layouts/        # Layout components
+│   ├── hooks/          # Custom React hooks
+│   ├── utils/          # Utility functions
+│   ├── types/          # TypeScript type definitions
+│   └── main.tsx        # Application entry point
+├── public/             # Static assets
+└── package.json        # Dependencies and scripts
+```
 
-All components are built with React and styled using Tailwind CSS for easy customization.
+## Available Scripts
 
-## Feature Comparison
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-### Free Version
+## Backend Integration
 
-- 1 Unique Dashboard
-- 30+ dashboard components
-- 50+ UI elements
-- Basic Figma design files
-- Community support
+This frontend is designed to work with the Restaurant Admin backend API. Make sure the backend server is running and configured with the correct API endpoints.
 
-### Pro Version
+### Environment Variables
 
-- 7 Unique Dashboards: Analytics, Ecommerce, Marketing, CRM, SaaS, Stocks, Logistics (more coming soon)
-- 500+ dashboard components and UI elements
-- Complete Figma design file
-- Email support
+Create a `.env` file in the frontend directory with the following variables:
 
-To learn more about pro version features and pricing, visit our [pricing page](https://tailadmin.com/pricing).
+```env
+VITE_API_BASE_URL=http://localhost:3000/api
+# Add other environment variables as needed
+```
 
-## Changelog
+## Features in Detail
 
-### Version 2.0.2 - [March 25, 2025]
+### Dashboard
+- Overview of key metrics and statistics
+- Recent orders and activity feed
+- Quick access to common tasks
 
-- Upgraded to React 19
-- Included overrides for packages to prevent peer dependency errors.
-- Migrated from react-flatpickr to flatpickr package for React 19 support
+### Menu Management
+- Add, edit, and delete menu items
+- Organize items by categories
+- Set prices and availability
+- Upload item images
 
-### Version 2.0.1 - [February 27, 2025]
+### Order Management
+- View all orders in real-time
+- Filter by status, date, or customer
+- Update order status
+- Print receipts
 
-#### Update Overview
+### Staff Management
+- Add and manage staff members
+- Assign roles and permissions
+- Track staff activity
 
-- Upgraded to Tailwind CSS v4 for better performance and efficiency.
-- Updated class usage to match the latest syntax and features.
-- Replaced deprecated class and optimized styles.
+### Analytics
+- Sales reports and trends
+- Popular items analysis
+- Revenue tracking
+- Customer insights
 
-#### Next Steps
+## Development
 
-- Run npm install or yarn install to update dependencies.
-- Check for any style changes or compatibility issues.
-- Refer to the Tailwind CSS v4 [Migration Guide](https://tailwindcss.com/docs/upgrade-guide) on this release. if needed.
-- This update keeps the project up to date with the latest Tailwind improvements. 🚀
+### Adding New Features
 
-### Version 2.0.0 - [February 2025]
+1. Create components in the `src/components/` directory
+2. Add pages in the `src/pages/` directory
+3. Update routing in the main router file
+4. Add types in `src/types/` if needed
 
-A major update with comprehensive redesign and modern React patterns implementation.
+### Styling
 
-#### Major Improvements
+This project uses Tailwind CSS for styling. You can customize the theme by modifying the Tailwind configuration file.
 
-- Complete UI redesign with modern React patterns
-- New features: collapsible sidebar, chat, and calendar
-- Improved performance and accessibility
-- Updated data visualization using ApexCharts
+## Building for Production
 
-#### Key Features
+To create a production build:
 
-- Redesigned dashboards (Ecommerce, Analytics, Marketing, CRM)
-- Enhanced navigation with React Router integration
-- Advanced tables with sorting and filtering
-- Calendar with drag-and-drop support
-- New UI components and improved existing ones
+```bash
+npm run build
+```
 
-#### Breaking Changes
+The build artifacts will be stored in the `dist/` directory.
 
-- Updated sidebar component API
-- Migrated charts to ApexCharts
-- Revised authentication system
+## Contributing
 
-[Read more](https://tailadmin.com/docs/update-logs/react) on this release.
-
-### Version 1.3.7 - [June 20, 2024]
-
-#### Enhancements
-
-1. Remove Repetition of DefaultLayout in every Pages
-2. Add ClickOutside Component for reduce repeated functionality in Header Message, Notification and User Dropdowns.
-
-### Version 1.3.6 - [Jan 31, 2024]
-
-#### Enhancements
-
-1. Integrate flatpickr in [Date Picker/Form Elements]
-2. Change color after select an option [Select Element/Form Elements].
-3. Make it functional [Multiselect Dropdown/Form Elements].
-4. Make best value editable [Pricing Table One/Pricing Table].
-5. Rearrange Folder structure.
-
-### Version 1.2.0 - [Apr 28, 2023]
-
-- Add Typescript in TailAdmin React.
-
-### Version 1.0.0 - Initial Release - [Mar 13, 2023]
-
-- Initial release of TailAdmin React.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-TailAdmin React.js Free Version is released under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.
 
 ## Support
 
-If you find this project helpful, please consider giving it a star on GitHub. Your support helps us continue developing
-and maintaining this template.
+For support, please open an issue in the repository or contact the development team.
+
+## Acknowledgments
+
+- Built with [React](https://react.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- UI components inspired by modern admin dashboard designs
